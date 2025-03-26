@@ -14,14 +14,14 @@
     head: ClothingHeadHelmetSwat
 
 - type: loadout
-  id: BlueshieldOfficerHeadBeretNavy
+  id: BlueshieldOfficerBeret
   equipment:
-    head: ClothingHeadHatBeretNavy
+    head: ClothingHeadHatBeretBlueshield # Here's your beret back Gallagin.
 
 - type: loadout
-  id: BlueshieldOfficerHeadBeretBlack
+  id: BlueshieldOfficerHeadCowboy
   equipment:
-    head: ClothingHeadHatBeretOfficer
+    head: ClothingHeadHatCowboyBlueshield
 
 - type: loadout
   id: BlueshieldOfficerHeadCowboy
@@ -68,6 +68,15 @@
     proto: SeniorBlueshieldOfficer
   equipment:
     neck: ClothingNeckMantleBlueshield
+
+# Mask
+- type: loadout
+  id: BlueshieldOfficerMaskLollypop
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: SeniorBlueshieldOfficer
+  equipment:
+    mask: FoodSnackLollypopBlueshield
 
 # Back
 - type: loadout
