@@ -1,0 +1,135 @@
+- type: entity
+  name: PTA XCG-4 Lancer 15mm
+  parent: BaseWeaponRifle
+  id: WeaponSpecialRailgun
+  description: A small-scale railgun developed by Pang Tai Arms. Not commonly seen due to the high price per unit. Chambered in 15mm.
+  components:
+  - type: Clothing
+    sprite: _Crescent/Objects/Weapons/Guns/railgun.rsi
+  - type: Sprite
+    sprite: _Crescent/Objects/Weapons/Guns/railgun.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-0
+        map: ["enum.GunVisualLayers.Mag"]
+  - type: Gun
+    fireRate: 0.5
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/charged.ogg
+    fireOnDropChance: 0.5
+  - type: ChamberMagazineAmmoProvider
+    soundRack:
+      path: /Audio/Weapons/Guns/Cock/ltrifle_cock.ogg
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: MagazineRailgun15mmAP
+        insertSound: /Audio/Weapons/Guns/MagIn/ltrifle_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/ltrifle_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - MagazineRailgun15mm
+      gun_chamber:
+        name: Chamber
+        startingItem: CartridgeRailgun15mmAP
+        priority: 1
+        whitelist:
+          tags:
+            - CartridgeRailgun15mm
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+      gun_chamber: !type:ContainerSlot
+  - type: MagazineVisuals
+    magState: mag
+    steps: 5
+    zeroVisible: true
+  - type: Appearance
+
+- type: entity
+  name: PTA 400c Mako handheld plasma repeater
+  parent: BaseWeaponBattery
+  id: WeaponSpecialMako
+  description: A shoulder-carried version of the NanoTrasen plasma repeater intended for infantry use by field operatives. Developed by Pang Tai Arms.
+  components:
+  - type: Sprite
+    sprite: _Crescent/Objects/Weapons/Guns/mako.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-unshaded-1
+      visible: false
+      map: ["enum.GunVisualLayers.MagUnshaded"]
+      shader: unshaded
+  - type: Appearance
+  - type: MagazineVisuals
+    magState: mag
+    steps: 3
+    zeroVisible: false
+  - type: Clothing
+    sprite: _Crescent/Objects/Weapons/Guns/mako.rsi
+  - type: Battery
+    maxCharge: 1000
+    startingCharge: 1000
+  - type: Gun
+    projectileSpeed: 15
+    fireRate: 0.5
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/ship_svalinn.ogg
+  - type: ProjectileBatteryAmmoProvider
+    proto: MakoPlasmaBullet
+    fireCost: 250
+  - type: MultiHandedItem
+
+- type: entity
+  id: MakoPlasmaBullet
+  name: plasma bolt
+  parent: BaseBulletTrigger
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Structural: 10
+        Radiation: 5
+        Heat: 50
+  - type: ExplodeOnTrigger
+  - type: Explosive
+    explosionType: Default
+    maxIntensity: 15
+    intensitySlope: 25
+    totalIntensity: 20
+    maxTileBreak: 2
+  - type: PointLight
+    radius: 3.5
+    color: orange
+    energy: 0.5
+  - type: Sprite
+    sprite: _NF/Objects/SpaceArtillery/plasmahardpoint.rsi
+    layers:
+      - state: icon
+
+- type: entity
+  name: SCHK-3 charge warhammer
+  parent: BaseItem
+  id: Plashammer
+  description: A robust warclub made by the Families.
+  components:
+  - type: Sprite
+    sprite: _Crescent/Objects/Weapons/plashammer.rsi
+    state: icon
+  - type: MeleeWeapon
+    wideAnimationRotation: -155 #onehanded stance allows for wider swing
+    damage:
+      types:
+        Blunt: 35
+        Heat: 10
+        Structural: 25
+    soundHit:
+      collection: MetalThud
+  - type: Item
+    size: Normal
+  - type: DisarmMalus #harder to shake firm grip

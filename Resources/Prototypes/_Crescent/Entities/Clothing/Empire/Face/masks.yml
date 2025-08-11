@@ -1,0 +1,12 @@
+- type: entity
+  parent: ClothingMaskBase
+  id: ClothingMaskImperialCombatGasmask
+  name: SolGov rebreather
+  description: A close-fitting rebreather designed for SolGov Workers.
+  components:
+  - type: Sprite
+    sprite: _Crescent/Clothing/Empire/Face/mandatesoldiermask.rsi
+  - type: Clothing
+    sprite: _Crescent/Clothing/Empire/Face/mandatesoldiermask.rsi
+  - type: EyeProtection
+  - type: BreathMask

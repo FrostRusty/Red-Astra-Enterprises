@@ -1,0 +1,27 @@
+#Ammo For Conscript, copied slugthrower one but doesn't phase trough walls
+- type: entity
+  id: BulletMachineGunHighExplosiveConscript
+  name: .50 low-yield explosive Conscript bullet
+  parent: BulletHighCaliberExplosive
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    ignoreWeaponGrid: false
+    damage:
+      types:
+        Structural: 150
+        Piercing: 55
+
+- type: entity
+  id: BulletMachineGunArmorPiercingConscript
+  name: .50 AP Conscript bullet
+  parent: BulletHighCaliber
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    ignoreWeaponGrid: false
+    damage:
+      types:
+        Structural: 150
+        Piercing: 75
+

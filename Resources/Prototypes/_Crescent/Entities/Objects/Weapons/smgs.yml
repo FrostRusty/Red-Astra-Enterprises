@@ -1,0 +1,341 @@
+- type: entity
+  name: PTA P-M50 Vektor
+  parent: BaseWeaponSubMachineGun
+  id: WeaponSubMachineGunPTAVektor
+  description: A cheap, open-bolt copy of the Vector. Favored by mercs on a budget. Chambered in small 6mm rounds.
+  components:
+  - type: Sprite
+    sprite: _Crescent/Objects/Weapons/Guns/vektor.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-0
+        map: ["enum.GunVisualLayers.Mag"]
+  - type: Clothing
+    sprite: _Crescent/Objects/Weapons/Guns/vektor.rsi
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: MagazinePistol6mmSmg
+        insertSound: /Audio/Weapons/Guns/MagIn/smg_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/smg_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - MagazineSMG6mm
+      gun_chamber:
+        name: Chamber
+        startingItem: CartridgePistol6mm
+        priority: 1
+        whitelist:
+          tags:
+            - CartridgePistol6mm
+  - type: Gun
+    minAngle: 24
+    maxAngle: 45
+    angleIncrease: 4
+    angleDecay: 16
+    fireRate: 8
+    soundGunshot:
+      path: /Audio/_Crescent/Weapons/Guns/smg_1/smg_gunshot_1.ogg
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: Appearance
+
+- type: entity
+  name: NCWL DS1 Watchdog
+  parent: BaseWeaponSubMachineGun
+  id: WeaponSubMachineGunNCWLWatchdog
+  description: A light submachinegun of communard design. Union Foundries makes these for the common grunt, and the cheap materials probably reflect that.
+  components:
+  - type: Sprite
+    sprite: _Crescent/Objects/Weapons/Guns/watchdog.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-0
+        map: ["enum.GunVisualLayers.Mag"]
+  - type: Clothing
+    sprite: _Crescent/Objects/Weapons/Guns/watchdog.rsi
+  - type: Gun
+    fireRate: 7
+    soundGunshot:
+      path: /Audio/_Crescent/Weapons/Guns/smg_3/smg_gunshot_2.ogg
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: Appearance
+  - type: StaticPrice
+    price: 600
+
+- type: entity
+  name: SHI MP49 Warden
+  parent: BaseWeaponSubMachineGun
+  id: WeaponSubMachineGunMP49
+  description: Shinohara's attempt at copying the vintage NanoTrasen MP5 and outsourcing it to the open market. Seen as an inferior model at first, most mercs and solos have taken a liking to this cheaper alternative.
+  components:
+  - type: StaticPrice
+    price: 600
+  - type: Sprite
+    sprite: _Crescent/Objects/Weapons/Guns/mp49.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-0
+        map: ["enum.GunVisualLayers.Mag"]
+  - type: Clothing
+    sprite: _Crescent/Objects/Weapons/Guns/mp49.rsi
+  - type: Gun
+    fireRate: 7
+    soundGunshot:
+      path: /Audio/_Crescent/Weapons/Guns/smg_2/smg_gunshot_3.ogg
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: Appearance
+
+- type: entity
+  name: NT MP5
+  parent: BaseWeaponSubMachineGun
+  id: WeaponSubMachineGunMP5
+  description: A light Terran submachinegun originating from NanoTrasen Industries. Seen as a superior alternative to most light SMGs on the market and often used by elite militias everywhere.
+  components:
+  - type: StaticPrice
+    price: 800
+  - type: Sprite
+    sprite: _Crescent/Objects/Weapons/Guns/mp5.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-0
+        map: ["enum.GunVisualLayers.Mag"]
+  - type: Clothing
+    sprite: _Crescent/Objects/Weapons/Guns/mp5.rsi
+  - type: Gun
+    fireRate: 7
+    selectedMode: FullAuto
+    soundGunshot:
+      path: /Audio/_Crescent/Weapons/Guns/smg_2/smg_gunshot_3.ogg
+    availableModes:
+    - FullAuto
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: MagazinePistolSubMachineGun
+        insertSound: /Audio/Weapons/Guns/MagIn/smg_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/smg_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - MagazinePistolSubMachineGun
+      gun_chamber:
+        name: Chamber
+        startingItem: CartridgePistol
+        priority: 1
+        whitelist:
+          tags:
+            - CartridgePistol
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: Appearance
+
+- type: entity
+  name: NCWL DS2 Liberator
+  parent: BaseWeaponSubMachineGun
+  id: WeaponSubMachineGunBloodhound
+  description: Manufactured for internal use by the Homeguard, the second entry of the Union Foundries focuses primarily on stopping power while sacrificing speed and agility.
+  components:
+    - type: Sprite
+      sprite: _Crescent/Objects/Weapons/Guns/liberator.rsi
+      layers:
+        - state: base
+          map: ["enum.GunVisualLayers.Base"]
+        - state: mag-0
+          map: ["enum.GunVisualLayers.Mag"]
+    - type: Clothing
+      sprite: _Crescent/Objects/Weapons/Guns/liberator.rsi
+    - type: Gun
+      fireRate: 6
+      selectedMode: FullAuto
+      soundGunshot:
+        path: /Audio/_Crescent/Weapons/Guns/smg_3/smg_gunshot_2.ogg
+      availableModes:
+        - FullAuto
+    - type: ItemSlots
+      slots:
+        gun_magazine:
+          name: Magazine
+          startingItem: MagazineMagnum
+          insertSound: /Audio/Weapons/Guns/MagIn/smg_magin.ogg
+          ejectSound: /Audio/Weapons/Guns/MagOut/smg_magout.ogg
+          priority: 2
+          whitelist:
+            tags:
+              - MagazineMagnum
+        gun_chamber:
+          name: Chamber
+          startingItem: CartridgeMagnum
+          priority: 1
+          whitelist:
+            tags:
+              - CartridgeMagnum
+    - type: MagazineVisuals
+      magState: mag
+      steps: 1
+      zeroVisible: true
+    - type: Appearance
+
+- type: entity
+  name: SHI M221s Phantom 
+  parent: BaseWeaponSubMachineGun
+  id: WeaponSubMachineGunSabre
+  description: A cheap submachine gun that cuts a few corners and features to deliver a reliable enough product, but hey, at least it comes with a free suppressor. Chambered in .35
+  components:
+  - type: StaticPrice
+    price: 1250
+  - type: Sprite
+    sprite: _Crescent/Objects/Weapons/Guns/sabre.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-0
+        map: ["enum.GunVisualLayers.Mag"]
+  - type: Clothing
+    sprite: _Crescent/Objects/Weapons/Guns/sabre.rsi
+  - type: Gun
+    fireRate: 7
+    selectedMode: FullAuto
+    soundGunshot:
+      path: /Audio/_Crescent/Weapons/Guns/supressed_1/supressed_gunshot_2.ogg
+      params:
+        volume: -10
+    availableModes:
+    - FullAuto
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: MagazinePistolSubMachineGun
+        insertSound: /Audio/Weapons/Guns/MagIn/smg_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/smg_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - MagazinePistolSubMachineGun
+      gun_chamber:
+        name: Chamber
+        startingItem: CartridgePistol
+        priority: 1
+        whitelist:
+          tags:
+            - CartridgePistol
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: Appearance
+
+- type: entity
+  name: HP MK-1 Beetle
+  parent: BaseWeaponSubMachineGun
+  id: WeaponSubMachineGunBeetle
+  description: A crude weapon manufactured by the Hunter's Pride merchant's guild. Intended as nothing more than cheap armament to stuff into the hands of expendable fodder.
+  components:
+  - type: StaticPrice
+    price: 1000
+  - type: Sprite
+    sprite: _Crescent/Objects/Weapons/Guns/beetle.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-0
+        map: ["enum.GunVisualLayers.Mag"]
+  - type: Clothing
+    sprite: _Crescent/Objects/Weapons/Guns/beetle.rsi
+  - type: Gun
+    fireRate: 6
+    selectedMode: FullAuto
+    soundGunshot:
+      path: /Audio/_Crescent/Weapons/Guns/smg_1/smg_gunshot_1.ogg
+    availableModes:
+    - FullAuto
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: MagazinePistolSubMachineGun
+        insertSound: /Audio/Weapons/Guns/MagIn/smg_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/smg_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - MagazinePistolSubMachineGun
+      gun_chamber:
+        name: Chamber
+        startingItem: CartridgePistol
+        priority: 1
+        whitelist:
+          tags:
+            - CartridgePistol
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: Appearance
+
+- type: entity
+  name: PTA P-M100 Cheshyre
+  parent: BaseWeaponSubMachineGun
+  id: WeaponSubMachineGunCheshyre
+  description: A heavy operator's SMG developed by Pang Tai Arms. Sold to independent contractors and security forces everywhere.
+  components:
+  - type: StaticPrice
+    price: 1250
+  - type: Sprite
+    sprite: _Crescent/Objects/Weapons/Guns/cheshyre.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-0
+        map: ["enum.GunVisualLayers.Mag"]
+    soundGunshot:
+      path: /Audio/_Crescent/Weapons/Guns/smg_3/smg_gunshot_2.ogg
+  - type: Gun
+    fireRate: 7
+    selectedMode: Burst
+    soundGunshot:
+      path: /Audio/_Crescent/Weapons/Guns/smg_3/smg_gunshot_2.ogg
+    availableModes:
+    - SemiAuto
+    - Burst
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: MagazineMagnumSubMachineGun
+        insertSound: /Audio/Weapons/Guns/MagIn/smg_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/smg_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - MagazineMagnumSubMachineGun
+      gun_chamber:
+        name: Chamber
+        startingItem: CartridgeMagnum
+        priority: 1
+        whitelist:
+          tags:
+            - CartridgeMagnum
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: Appearance

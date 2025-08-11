@@ -1,0 +1,19 @@
+- type: entity
+  name: NT-6R Bulldog
+  parent: BaseWeaponRevolver
+  id: WeaponRevolverSnubnose
+  description: A bulky, short-barreled snubnose revolver. Ported directly from ancient Terran designs by NanoTrasen. Chambered in .45.
+  components:
+  - type: Sprite
+    sprite: _Crescent/Objects/Weapons/Guns/bulldog.rsi
+  - type: Gun
+    selectedMode: SemiAuto
+    fireRate: 2
+    availableModes:
+    - SemiAuto
+    soundGunshot:
+      path: /Audio/_Crescent/Weapons/Guns/revolver_1/revolver_gunshot_2.ogg
+      params:
+        volume: 2.25
+  - type: StaticPrice
+    price: 1250

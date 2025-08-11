@@ -1,0 +1,712 @@
+- type: entity
+  name: SGRM DA-1R Muster
+  parent: [BaseWeaponSniper, BaseGunWieldable]
+  id: WeaponRifleDSMMuster
+  description: A simple and cheap semi-auto rifle with a internal magazine, issued to rearline and reserve units. Chambered in .30
+  components:
+  - type: Sprite
+    sprite: _Crescent/Objects/Weapons/Guns/muster.rsi
+  - type: Gun
+    fireRate: 4
+    selectedMode: SemiAuto
+    availableModes:
+    - SemiAuto
+    soundGunshot:
+      path: /Audio/_Crescent/Weapons/Guns/dmr_1/dmr_gunshot_2.ogg
+  - type: BallisticAmmoProvider
+    capacity: 20
+    proto: CartridgeLightRifle
+    whitelist:
+      tags:
+      - CartridgeLightRifle
+
+- type: entity
+  name: NCWL MK-1 Rezerv
+  parent: [BaseWeaponSniper, BaseGunWieldable]
+  id: WeaponRifleNCWLRezerv
+  description: A rifle based on ancient schematics, built with the simplicity and cost-effectiveness of an AK. Chambered in .20
+  components:
+  - type: Sprite
+    sprite: _Crescent/Objects/Weapons/Guns/rezerv.rsi
+  - type: Gun
+    fireRate: 4
+    selectedMode: SemiAuto
+    availableModes:
+    - SemiAuto
+    soundGunshot:
+      path: /Audio/_Crescent/Weapons/Guns/dmr_1/dmr_gunshot_2.ogg
+  - type: BallisticAmmoProvider
+    capacity: 15
+    proto: CartridgeRifle
+    whitelist:
+      tags:
+      - CartridgeRifle
+
+- type: entity
+  name: SGRM DA-11 legionnaire
+  id: WeaponRifleDSMLegionnaire
+  parent: BaseWeaponRifle
+  description: An overengineered rifle, sharing multiple features with the C-20R SMG, such as a odd magazine angle and automatic magazine ejection. Chambered in .20
+  components:
+  - type: Sprite
+    sprite: _Crescent/Objects/Weapons/Guns/legionnaire.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-0
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: MagazineRifle
+        insertSound: /Audio/Weapons/Guns/MagIn/batrifle_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/batrifle_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - MagazineRifle
+      gun_chamber:
+        name: Chamber
+        startingItem: CartridgeRifle
+        priority: 1
+        whitelist:
+          tags:
+            - CartridgeRifle
+  - type: Gun
+    shotsPerBurst: 3
+    availableModes:
+    - SemiAuto
+    - Burst
+    - FullAuto
+    burstFireRate: 6
+    fireRate: 6
+  - type: ChamberMagazineAmmoProvider
+    autoEject: true
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: Appearance
+
+- type: entity
+  name: PTA T3 Whisper
+  parent: BaseWeaponRifle
+  id: WeaponSubMachineGunPTAAsVal
+  description: A robust rifle with an inbuilt suppressor. Features a special fast-burst mode to increase hit probability. Chambered in 9.5 caseless rounds.
+  components:
+  - type: Sprite
+    sprite: _Crescent/Objects/Weapons/Guns/asval.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-0
+        map: ["enum.GunVisualLayers.Mag"]
+  - type: Clothing
+    sprite: _Crescent/Objects/Weapons/Guns/asval.rsi
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: MagazineCaselessRifle
+        insertSound: /Audio/Weapons/Guns/MagIn/batrifle_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/batrifle_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - MagazineCaselessRifle
+      gun_chamber:
+        name: Chamber
+        startingItem: CartridgeCaselessRifle
+        priority: 1
+        whitelist:
+          tags:
+            - CartridgeCaselessRifle
+  - type: Gun
+    shotsPerBurst: 2
+    availableModes:
+    - Burst
+    - FullAuto
+    burstFireRate: 24
+    burstCooldown: 0.5
+    fireRate: 6
+    soundGunshot:
+      path: /Audio/_Crescent/Weapons/Guns/supressed_2/supressed_gunshot_2.ogg
+      params:
+        volume: -10
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: Appearance
+
+- type: entity
+  name: NCWL MK-3 Batanya
+  parent: BaseWeaponRifle
+  id: WeaponRifleNCWLBatanya
+  description: An iconic weapon of war from the Union Foundry. Developed for use by their Homeguard. Comes equipped with NightGlo tracer dot sights. Chambered in .20
+  components:
+  - type: Sprite
+    sprite: _Crescent/Objects/Weapons/Guns/batanya.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-0
+        map: ["enum.GunVisualLayers.Mag"]
+  - type: Clothing
+    sprite: _Crescent/Objects/Weapons/Guns/batanya.rsi
+  - type: Gun
+    fireRate: 4
+    soundGunshot:
+      path: /Audio/_Crescent/Weapons/Guns/rifle_1/rifle_gunshot_2.ogg
+  - type: ChamberMagazineAmmoProvider
+    soundRack:
+      path: /Audio/Weapons/Guns/Cock/ltrifle_cock.ogg
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: MagazineRifle
+        insertSound: /Audio/Weapons/Guns/MagIn/ltrifle_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/ltrifle_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - MagazineRifle
+      gun_chamber:
+        name: Chamber
+        startingItem: CartridgeRifle
+        priority: 1
+        whitelist:
+          tags:
+            - CartridgeRifle
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+      gun_chamber: !type:ContainerSlot
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: Appearance
+  - type: StaticPrice
+    price: 2500
+
+- type: entity
+  name: SHI M55 Goro
+  parent: BaseWeaponRifle
+  id: WeaponRifleGoro
+  description: A clunky battle rifle produced by Shinohara Heavy Industries for the civilian market. Often overlooked by more experienced solos and mercs for more rapid-firing alternatives - it's only saving grace is the heavy caliber.
+  components:
+  - type: Sprite
+    sprite: _Crescent/Objects/Weapons/Guns/goro.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-0
+        map: ["enum.GunVisualLayers.Mag"]
+  - type: Clothing
+    sprite: _Crescent/Objects/Weapons/Guns/goro.rsi
+  - type: Gun
+    fireRate: 4.8
+    soundGunshot:
+      path: /Audio/_Crescent/Weapons/Guns/rifle_1/rifle_gunshot_2.ogg
+  - type: ChamberMagazineAmmoProvider
+    soundRack:
+      path: /Audio/Weapons/Guns/Cock/ltrifle_cock.ogg
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: MagazineRifle
+        insertSound: /Audio/Weapons/Guns/MagIn/ltrifle_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/ltrifle_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - MagazineRifle
+      gun_chamber:
+        name: Chamber
+        startingItem: CartridgeRifle
+        priority: 1
+        whitelist:
+          tags:
+            - CartridgeRifle
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+      gun_chamber: !type:ContainerSlot
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: Appearance
+  - type: StaticPrice
+    price: 2500
+
+
+- type: entity
+  name: PTA D5 Takemura
+  parent: BaseWeaponRifle
+  id: WeaponRifleTakemura
+  description: A tactical battle rifle from the Pang Tai Arms design labs. All combat. All the time. Chambered in .20
+  components:
+  - type: Sprite
+    sprite: _Crescent/Objects/Weapons/Guns/takemura.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-0
+        map: ["enum.GunVisualLayers.Mag"]
+  - type: Clothing
+    sprite: _Crescent/Objects/Weapons/Guns/takemura.rsi
+  - type: Gun
+    fireRate: 6
+    soundGunshot:
+      path: /Audio/_Crescent/Weapons/Guns/rifle_1/rifle_gunshot_2.ogg
+  - type: ChamberMagazineAmmoProvider
+    soundRack:
+      path: /Audio/Weapons/Guns/Cock/ltrifle_cock.ogg
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: MagazineRifle
+        insertSound: /Audio/Weapons/Guns/MagIn/ltrifle_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/ltrifle_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - MagazineRifle
+      gun_chamber:
+        name: Chamber
+        startingItem: CartridgeRifle
+        priority: 1
+        whitelist:
+          tags:
+            - CartridgeRifle
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+      gun_chamber: !type:ContainerSlot
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: Appearance
+  - type: StaticPrice
+    price: 2500
+
+- type: entity
+  name: SGRM DA-8 Miller
+  parent: BaseWeaponRifle
+  id: WeaponRifleMiller
+  description: A mil-grade assault rifle produced by Olywir Armaments, primarily for the SolGov Garrison and SolGov Naval Forces. Comes chambered in .30 rounds. All flair.
+  components:
+  - type: Sprite
+    sprite: _Crescent/Objects/Weapons/Guns/miller.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-0
+        map: ["enum.GunVisualLayers.Mag"]
+  - type: Clothing
+    sprite: _Crescent/Objects/Weapons/Guns/miller.rsi
+  - type: Gun
+    fireRate: 5
+    soundGunshot:
+      path: /Audio/_Crescent/Weapons/Guns/rifle_2/rifle_gunshot_2.ogg
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: MagazineLightRifle
+        insertSound: /Audio/Weapons/Guns/MagIn/ltrifle_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/ltrifle_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - MagazineLightRifle
+      gun_chamber:
+        name: Chamber
+        startingItem: CartridgeLightRifle
+        priority: 1
+        whitelist:
+          tags:
+            - CartridgeLightRifle
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+      gun_chamber: !type:ContainerSlot
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: Appearance
+  - type: StaticPrice
+    price: 3500
+
+- type: entity
+  name: NCWL MK-2 Falin
+  parent: BaseWeaponRifle
+  id: WeaponRifleFAL
+  description: Reverse-engineered from SolGov light battle rifle designs. Sacrifices heavier calibers for better rifling, allowing for more rapid fire.
+  components:
+  - type: Sprite
+    sprite: _Crescent/Objects/Weapons/Guns/fal.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-0
+        map: ["enum.GunVisualLayers.Mag"]
+  - type: Clothing
+    sprite: _Crescent/Objects/Weapons/Guns/fal.rsi
+  - type: Gun
+    fireRate: 6
+    soundGunshot:
+      path: /Audio/_Crescent/Weapons/Guns/rifle_2/rifle_gunshot_2.ogg
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: MagazineLightRifle
+        insertSound: /Audio/Weapons/Guns/MagIn/ltrifle_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/ltrifle_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - MagazineLightRifle
+      gun_chamber:
+        name: Chamber
+        startingItem: CartridgeLightRifle
+        priority: 1
+        whitelist:
+          tags:
+            - CartridgeLightRifle
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+      gun_chamber: !type:ContainerSlot
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: Appearance
+  - type: StaticPrice
+    price: 3000
+
+
+- type: entity
+  name: NCSP AK-74U Krinkov
+  parent: BaseWeaponRifle
+  id: WeaponRifleKrinkov
+  description: A shortened battle rifle, replicated from Terran designs by the Coalition - commonly attributed to terrorist groups. Cheap and easily made.
+  components:
+  - type: Item
+    shape:
+    - 0,0,4,1
+  - type: Sprite
+    sprite: _Crescent/Objects/Weapons/Guns/krinkov.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-0
+        map: ["enum.GunVisualLayers.Mag"]
+  - type: Clothing
+    sprite: _Crescent/Objects/Weapons/Guns/krinkov.rsi
+  - type: Gun
+    fireRate: 5
+    soundGunshot:
+      collection: AK_74_Gunshots
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: MagazineLightRifle
+        insertSound: /Audio/Weapons/Guns/MagIn/ltrifle_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/ltrifle_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - MagazineLightRifle
+      gun_chamber:
+        name: Chamber
+        startingItem: CartridgeLightRifle
+        priority: 1
+        whitelist:
+          tags:
+            - CartridgeLightRifle
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+      gun_chamber: !type:ContainerSlot
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: Appearance
+  - type: StaticPrice
+    price: 800
+  - type: Contraband
+    value: 3
+
+- type: entity
+  name: PTA 3AX Halyad
+  parent: BaseWeaponRifle
+  id: WeaponRifleHalyadMarksman
+  description: A hefty long-range precision rifle. Packs devastating .50 shells. Developed as part of Pang Tai's mercenary package.
+  components:
+  - type: Sprite
+    sprite: _Crescent/Objects/Weapons/Guns/halyad.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-0
+        map: ["enum.GunVisualLayers.Mag"]
+  - type: Clothing
+    sprite: _Crescent/Objects/Weapons/Guns/halyad.rsi
+  - type: Gun
+    fireRate: 2.5
+    soundGunshot:
+      path: /Audio/_Crescent/Weapons/Guns/dmr_1/dmr_gunshot_2.ogg
+    selectedMode: SemiAuto
+    availableModes:
+      - SemiAuto
+      - FullAuto
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: MagazineHighCaliber
+        insertSound: /Audio/Weapons/Guns/MagIn/ltrifle_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/ltrifle_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - MagazineHighCaliber
+      gun_chamber:
+        name: Chamber
+        startingItem: CartridgeHighCaliber
+        priority: 1
+        whitelist:
+          tags:
+            - CartridgeHighCaliber
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+      gun_chamber: !type:ContainerSlot
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: Appearance
+  - type: StaticPrice
+    price: 1000
+
+- type: entity
+  name: SHI M215 Hound
+  parent: BaseWeaponRifle
+  id: WeaponRifleHoundMarksman
+  description: A cheap marksman's rifle, one of the few weapons produced for an external market by Shinohara Heavy Industries. Often seen in the hands of wanna-be mercs and thugs.
+  components:
+  - type: Sprite
+    sprite: _Crescent/Objects/Weapons/Guns/hound.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-0
+        map: ["enum.GunVisualLayers.Mag"]
+  - type: Clothing
+    sprite: _Crescent/Objects/Weapons/Guns/hound.rsi
+  - type: Gun
+    soundGunshot:
+      path: /Audio/_Crescent/Weapons/Guns/M16/rifle_gunshot_2.ogg
+    selectedMode: SemiAuto
+    availableModes:
+      - SemiAuto
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: MagazineLightRifle
+        insertSound: /Audio/Weapons/Guns/MagIn/ltrifle_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/ltrifle_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - MagazineLightRifle
+      gun_chamber:
+        name: Chamber
+        startingItem: CartridgeLightRifle
+        priority: 1
+        whitelist:
+          tags:
+            - CartridgeLightRifle
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+      gun_chamber: !type:ContainerSlot
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: Appearance
+  - type: StaticPrice
+    price: 1000
+
+- type: entity
+  name: HP M17-SA Hunter
+  parent: BaseWeaponRifle
+  id: WeaponRifleHunter
+  description: A marksman's rifle of foreign make, repurposed as a mainline battle carbine amongst the predators of this Sector.
+  components:
+  - type: Sprite
+    sprite: _Crescent/Objects/Weapons/Guns/hunter.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-0
+        map: ["enum.GunVisualLayers.Mag"]
+  - type: Clothing
+    sprite: _Crescent/Objects/Weapons/Guns/hunter.rsi
+  - type: Gun
+    soundGunshot:
+      path: /Audio/_Crescent/Weapons/Guns/M16/rifle_gunshot_2.ogg
+    selectedMode: SemiAuto
+    availableModes:
+      - SemiAuto
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: MagazineLightRifle
+        insertSound: /Audio/Weapons/Guns/MagIn/ltrifle_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/ltrifle_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - MagazineLightRifle
+      gun_chamber:
+        name: Chamber
+        startingItem: CartridgeLightRifle
+        priority: 1
+        whitelist:
+          tags:
+            - CartridgeRifle
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+      gun_chamber: !type:ContainerSlot
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: Appearance
+  - type: StaticPrice
+    price: 2000
+
+- type: entity
+  name: NCSP AK-379M Mayflower
+  parent: BaseWeaponRifle
+  id: WeaponRifleMayflower
+  description: A hefty battle carbine produced by the Coalition for the external independent market. Seen often in the hands of the Gorlex during harassment raids.
+  components:
+  - type: Sprite
+    sprite: _Crescent/Objects/Weapons/Guns/mayflower.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-0
+        map: ["enum.GunVisualLayers.Mag"]
+  - type: Clothing
+    sprite: _Crescent/Objects/Weapons/Guns/mayflower.rsi
+  - type: Gun
+    soundGunshot:
+      path: /Audio/_Crescent/Weapons/Guns/rifle_1/rifle_gunshot_2.ogg
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: MagazineRifle
+        insertSound: /Audio/Weapons/Guns/MagIn/ltrifle_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/ltrifle_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - MagazineRifle
+      gun_chamber:
+        name: Chamber
+        startingItem: CartridgeRifle
+        priority: 1
+        whitelist:
+          tags:
+            - CartridgeRifle
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+      gun_chamber: !type:ContainerSlot
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: Appearance
+  - type: StaticPrice
+    price: 1500
+  - type: Contraband
+    value: 3
+
+- type: entity
+  name: SHI M335 Barghest
+  parent: BaseWeaponRifle
+  id: WeaponRifleBarghest
+  description: A hefty CQC battle rifle, built with a fast-burst mode copied from the PTA T3 Whisper. Chambered in the devastating .50 round.
+  components:
+  - type: Sprite
+    sprite: _Crescent/Objects/Weapons/Guns/barghest.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-0
+        map: ["enum.GunVisualLayers.Mag"]
+  - type: Clothing
+    sprite: _Crescent/Objects/Weapons/Guns/barghest.rsi
+  - type: Gun
+    fireRate: 2.5
+    shotsPerBurst: 2
+    burstFireRate: 24
+    burstCooldown: 1.5
+    soundGunshot:
+      path: /Audio/_Crescent/Weapons/Guns/dmr_1/dmr_gunshot_2.ogg
+    selectedMode: SemiAuto
+    availableModes:
+      - SemiAuto
+      - Burst
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: MagazineHighCaliber
+        insertSound: /Audio/Weapons/Guns/MagIn/ltrifle_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/ltrifle_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - MagazineHighCaliber
+      gun_chamber:
+        name: Chamber
+        startingItem: CartridgeHighCaliber
+        priority: 1
+        whitelist:
+          tags:
+            - CartridgeHighCaliber
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+      gun_chamber: !type:ContainerSlot
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: Appearance
+  - type: StaticPrice
+    price: 1000
