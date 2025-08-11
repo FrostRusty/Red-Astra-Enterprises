@@ -1,6 +1,6 @@
 - type: entity
   id: BaseMagazineRifleDrum
-  name: "drum magazine (7.62x51mm USM)"
+  name: "drum magazine (.20 SGM)"
   parent: BaseItem
   abstract: true
   components:
@@ -33,7 +33,7 @@
 
 - type: entity
   id: MagazineRifleDrumEmpty
-  name: "drum magazine (7.62x51mm USM any)"
+  name: "drum magazine (.20 SGM any)"
   suffix: empty
   parent: BaseMagazineRifleDrum
   components:
@@ -42,7 +42,7 @@
       
 - type: entity
   id: MagazineRifleDrum
-  name: "drum magazine (7.62x51mm USM)"
+  name: "drum magazine (.20 SGM)"
   parent: BaseMagazineRifleDrum
   components:
   - type: BallisticAmmoProvider
@@ -50,7 +50,7 @@
 
 - type: entity
   id: MagazineRifleDrumIncendiary
-  name: "drum magazine (7.62x51mm USM incendiary)"
+  name: "drum magazine (.20 SGM incendiary)"
   parent: BaseMagazineRifleDrum
   components:
   - type: BallisticAmmoProvider
@@ -58,23 +58,15 @@
 
 - type: entity
   id: MagazineRifleDrumPractice
-  name: "drum magazine (7.62x51mm USM practice)"
+  name: "drum magazine (.20 SGM practice)"
   parent: BaseMagazineRifleDrum
   components:
   - type: BallisticAmmoProvider
     proto: CartridgeRiflePractice
 
 - type: entity
-  id: MagazineRifleDrumRubber
-  name: "drum magazine (7.62x51mm USM rubber)"
-  parent: BaseMagazineRifleDrum
-  components:
-  - type: BallisticAmmoProvider
-    proto: CartridgeRifleRubber
-
-- type: entity
   id: MagazineRifleDrumBlackTip
-  name: "drum magazine (7.62x51mm USM black-tip)"
+  name: "drum magazine (.20 SGM black-tip)"
   parent: BaseMagazineRifleDrum
   components:
   - type: BallisticAmmoProvider
@@ -82,7 +74,7 @@
 
 - type: entity
   id: MagazineRifleDrumShrapnel
-  name: "drum magazine (7.62x51mm USM shrapnel"
+  name: "drum magazine (.20 SGM shrapnel"
   parent: BaseMagazineRifleDrum
   components:
   - type: BallisticAmmoProvider

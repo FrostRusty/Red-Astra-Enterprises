@@ -31,3 +31,6 @@
 
 - type: Tag
   id: Magazine6x24mm
+
+- type: Tag # Frontier Space Artillery
+  id: CartridgeMachineGun # Frontier Space Artillery

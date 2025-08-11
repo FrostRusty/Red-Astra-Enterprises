@@ -115,8 +115,6 @@
     damage:
       types:
         Piercing: 65
-    harmorPenetration: 19
-    stoppingPower : 16
 
 - type: entity
   name: 4g slug box
@@ -160,8 +158,6 @@
     damage:
       types:
         Piercing: 35
-    harmorPenetration: 40
-    stoppingPower : 12
 
 - type: entity
   name: 4g sabot box
@@ -203,8 +199,6 @@
     damage:
       types:
         Piercing: 19
-    harmorPenetration: 4
-    stoppingPower: 3
 
 - type: entity
   id: PelletShotgunSpread4g
@@ -256,8 +250,6 @@
     damage:
       types:
         Piercing: 32
-    harmorPenetration: 6
-    stoppingPower: 5
 
 - type: entity
   id: PelletShotgunMagnumSpread4g
@@ -367,7 +359,6 @@
     damage:
       types:
         Piercing: 12
-    harmorPenetration: 19
 
 - type: entity
   id: PelletShotgunUraniumSpread4g

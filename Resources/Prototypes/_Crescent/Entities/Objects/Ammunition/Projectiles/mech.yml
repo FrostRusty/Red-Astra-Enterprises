@@ -23,8 +23,6 @@
       types:
         Piercing: 90
         Structural: 400 
-    harmorPenetration: 80
-    stoppingPower: 12
   - type: ExplodeOnTrigger
   - type: Explosive
     explosionType: Default
@@ -44,8 +42,6 @@
       types:
         Piercing: 65 #Dummy but holy shit these are massive
         Structural: 100
-    harmorPenetration: 70
-    stoppingPower: 9
 
 - type: entity
   id: ExosuitAutoshotgunPellet
@@ -61,8 +57,6 @@
       types:
         Piercing: 40
         Structural: 80
-    harmorPenetration: 30
-    stoppingPower: 6
 
 - type: entity
   id: ExosuitAutoshotgunPelletSpread

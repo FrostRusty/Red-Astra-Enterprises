@@ -43,8 +43,6 @@
   - type: EmitSoundOnDrop
     sound: /Audio/_Crescent/Weapons/Grenades/drop1.ogg
   - type: EmitSoundOnLand
-    sound:
-      collection: SmokeGrenadeSFX
 
 - type: entity
   name: M18 Smoke grenade
@@ -71,7 +69,6 @@
     sound: /Audio/_Crescent/Weapons/Grenades/drop1.ogg
   - type: EmitSoundOnLand
     sound:
-      collection: SmokeGrenadeSFX
 
 - type: entity
   name: F-1 Grenade
@@ -99,7 +96,6 @@
     sound: /Audio/_Crescent/Weapons/Grenades/drop1.ogg
   - type: EmitSoundOnLand
     sound:
-      collection: FragGrenadeSFX
 
 - type: entity
   name: NCSP RGD-5 Grenade
@@ -127,7 +123,6 @@
     sound: /Audio/_Crescent/Weapons/Grenades/drop1.ogg
   - type: EmitSoundOnLand
     sound:
-      collection: FragGrenadeSFX
 
 - type: entity
   name: NCSP RGD-2B Smoke grenade
@@ -154,7 +149,6 @@
     sound: /Audio/_Crescent/Weapons/Grenades/drop2.ogg
   - type: EmitSoundOnLand
     sound:
-      collection: SmokeGrenadeSFX
 
 - type: entity
   name: NCWL RGD-55M13 Grenade
@@ -182,7 +176,6 @@
     sound: /Audio/_Crescent/Weapons/Grenades/drop1.ogg
   - type: EmitSoundOnLand
     sound:
-      collection: FragGrenadeSFX
 
 - type: entity
   name: NCWL Zaryia-4M Flashbang
@@ -213,7 +206,6 @@
     sound: /Audio/_Crescent/Weapons/Grenades/drop1.ogg
   - type: EmitSoundOnLand
     sound:
-      collection: FlashGrenadeSFX
 
 - type: entity
   name: DSM G-8 Neurotoxin grenade
@@ -254,7 +246,6 @@
     sound: /Audio/_Crescent/Weapons/Grenades/drop1.ogg
   - type: EmitSoundOnLand
     sound:
-      collection: SmokeGrenadeSFX
 
 - type: entity
   name: DSM G-4 Twist-cap grenade
@@ -282,7 +273,6 @@
     sound: /Audio/_Crescent/Weapons/Grenades/drop1.ogg
   - type: EmitSoundOnLand
     sound:
-      collection: FragGrenadeSFX
 
 - type: entity
   name: DSM G-3 Stick grenade
@@ -322,7 +312,6 @@
     sound: /Audio/_Crescent/Weapons/Grenades/drop1.ogg
   - type: EmitSoundOnLand
     sound:
-      collection: SmokeGrenadeSFX
 
 - type: entity
   name: PTA He-Im-OFG-31 Impact grenade
@@ -384,7 +373,6 @@
     sound: /Audio/_Crescent/Weapons/Grenades/drop1.ogg
   - type: EmitSoundOnLand
     sound:
-      collection: FragGrenadeSFX
 
 - type: entity
   name: PTA Cp-Tf-SG-32 WP Smoke grenade
@@ -419,7 +407,6 @@
     sound: /Audio/_Crescent/Weapons/Grenades/drop1.ogg
   - type: EmitSoundOnLand
     sound:
-      collection: SmokeGrenadeSFX
 
 - type: entity
   name: SHI HG-13M2 Mini-grenade
@@ -449,7 +436,6 @@
     sound: /Audio/_Crescent/Weapons/Grenades/drop1.ogg
   - type: EmitSoundOnLand
     sound:
-      collection: FragGrenadeSFX
 
 - type: entity
   name: SHI HG-23 Electromagnetic grenade
@@ -476,7 +462,6 @@
     sound: /Audio/_Crescent/Weapons/Grenades/drop1.ogg
   - type: EmitSoundOnLand
     sound:
-      collection: FlashGrenadeSFX
 
 - type: entity
   name: SHI HG-17 Smart-grenade
@@ -504,7 +489,6 @@
     sound: /Audio/_Crescent/Weapons/Grenades/drop1.ogg
   - type: EmitSoundOnLand
     sound:
-      collection: FragGrenadeSFX
 
 - type: entity
   name: SHI HG-3 CS Gas grenade
@@ -535,7 +519,6 @@
     sound: /Audio/_Crescent/Weapons/Grenades/drop1.ogg
   - type: EmitSoundOnLand
     sound:
-      collection: SmokeGrenadeSFX
 
 - type: entity
   name: SHI HG-07 Flashbang
@@ -564,4 +547,3 @@
     sound: /Audio/_Crescent/Weapons/Grenades/drop1.ogg
   - type: EmitSoundOnLand
     sound:
-      collection: FlashGrenadeSFX
