@@ -1,0 +1,33 @@
+
+- type: Tag
+  id: CartridgeHeavyPistol
+
+- type: Tag
+  id: CartridgePistolSmart
+
+- type: Tag
+  id: CartridgePistol6mm
+
+- type: Tag
+  id: MagazinePistol6mm
+
+- type: Tag
+  id: MagazineNCWLConscriptBox
+
+- type: Tag
+  id: CartridgeMachineGunConscript
+
+- type: Tag # Hullrot
+  id: ShellShotgun4g # Hullrot
+
+- type: Tag
+  id: MagazineRifleDrum
+
+- type: Tag
+  id: MagazineRiflePan
+
+- type: Tag
+  id: MagazineSMG6mm
+
+- type: Tag
+  id: Magazine6x24mm

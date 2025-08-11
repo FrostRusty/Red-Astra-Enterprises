@@ -19,7 +19,6 @@
     - Burst
     burstFireRate: 24
     burstCooldown: 1
-    fireOnDropChance: 0.5
     soundGunshot:
       path: /Audio/_Crescent/Weapons/Guns/shotgun_2/shotgun_gunshot_2.ogg
   - type: Wieldable
@@ -42,7 +41,6 @@
   - type: GunRequiresWield
   - type: Gun
     fireRate: 3
-    fireOnDropChance: 0.5
     soundGunshot:
       path: /Audio/_Crescent/Weapons/Guns/shotgun_2/shotgun_gunshot_2.ogg
   - type: Wieldable
@@ -91,7 +89,6 @@
     - SemiAuto
     soundGunshot:
       path: /Audio/Weapons/Guns/UnionfallWeapons/shotgun_fire_1.ogg
-    fireOnDropChance: 1
   - type: BallisticAmmoProvider
     capacity: 6
     autoCycle: true
@@ -128,7 +125,6 @@
     - Burst
     soundGunshot:
       path: /Audio/Weapons/Guns/UnionfallWeapons/shotgun_fire_1.ogg
-    fireOnDropChance: 1
   - type: BallisticAmmoProvider
     capacity: 2
     autoCycle: true

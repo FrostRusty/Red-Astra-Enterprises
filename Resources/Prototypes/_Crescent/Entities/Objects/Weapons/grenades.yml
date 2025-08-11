@@ -30,6 +30,8 @@
       reagents:
       - ReagentId: Phlogiston
         Quantity: 20
+      - ReagentId: Napalm
+        Quantity: 20
   - type: TimerTriggerVisuals
     primingSound:
       path: "/Audio/_Crescent/Weapons/Grenades/trigger1.ogg"
@@ -233,8 +235,6 @@
       - ReagentId: Cyanide
         Quantity: 20
       - ReagentId: Impedrezene
-        Quantity: 20
-      - ReagentId: LiftLoversSpecial
         Quantity: 20
       - ReagentId: ChloralHydrate
         Quantity: 20
