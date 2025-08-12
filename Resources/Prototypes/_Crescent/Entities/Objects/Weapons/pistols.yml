@@ -15,7 +15,6 @@
     - 0,0,1,0
     - 0,1,0,1
     sprite: _Crescent/Objects/Weapons/Guns/liquidator.rsi
-  - type: Execution
   - type: ItemSlots
     slots:
       gun_chamber:
@@ -25,7 +24,7 @@
         whitelist:
           tags:
             - ShellShotgun
-  - type: ContainerContainer
+  - type: Container
     containers:
       gun_chamber: !type:ContainerSlot
   - type: ChamberMagazineAmmoProvider
