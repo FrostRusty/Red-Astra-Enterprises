@@ -447,8 +447,6 @@
   - type: Appearance
   - type: StaticPrice
     price: 800
-  - type: Contraband
-
 
 - type: entity
   name: PTA 3AX Halyad
@@ -652,8 +650,6 @@
   - type: Appearance
   - type: StaticPrice
     price: 1500
-  - type: Contraband
-
 
 - type: entity
   name: SHI M335 Barghest
