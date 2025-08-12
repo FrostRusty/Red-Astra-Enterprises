@@ -10,7 +10,6 @@
         Piercing: 45
         Structural: 60
 
-
 - type: entity
   id: BulletMechAutocannon
   name: bullet (90mm USTF)
@@ -91,4 +90,3 @@
     proto: PelletShotgun
     count: 3
     spread: 15
-  

@@ -531,7 +531,6 @@
 - type: Tag
   id: MagazinePistolSmartgun
 
-
 - type: entity
   name: PTA BA-6 Rongyu
   parent: BaseWeaponPistol

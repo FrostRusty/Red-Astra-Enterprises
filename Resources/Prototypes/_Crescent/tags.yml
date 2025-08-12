@@ -34,3 +34,21 @@
 
 - type: Tag # Frontier Space Artillery
   id: CartridgeMachineGun # Frontier Space Artillery
+
+- type: Tag # Frontier Space Artillery
+  id: CartridgeRailgun # Frontier Space Artillery
+
+- type: Tag # Frontier Space Artillery
+  id: CartridgeShell # Frontier Space Artillery
+
+- type: Tag
+  id: Cartridge6x24mm
+
+- type: Tag
+  id: CartridgeRailgun15mm
+
+- type: Tag
+  id: MagazineRailgun15mm
+
+- type: Tag
+  id: CartridgeRifleShrapnel

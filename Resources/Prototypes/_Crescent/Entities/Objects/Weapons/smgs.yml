@@ -140,7 +140,7 @@
         priority: 1
         whitelist:
           tags:
-            - CartridgePistol
+           - CartridgePistol
   - type: MagazineVisuals
     magState: mag
     steps: 1
