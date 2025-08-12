@@ -32,7 +32,6 @@
     soundInsert:
       path: /Audio/Weapons/Guns/MagIn/batrifle_magin.ogg
 
-
 - type: entity
   name: SHI MGL-6 Milkor
   parent: [BaseWeaponRevolver, BaseGunWieldable]

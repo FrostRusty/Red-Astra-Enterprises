@@ -283,11 +283,6 @@
   - type: StaticPrice
     price: 3500
 
-#single use pistols
-
-
-#single use pistol base
-
 - type: entity
   name: BasePistolOneuse
   parent: BaseItem
@@ -330,8 +325,6 @@
   - type: Appearance
   - type: StaticPrice
     price: 500
-
-#single use pistols actual
 
 - type: entity
   name: SHI-DG02 Blastpop 'Cherry Red' 6mm
