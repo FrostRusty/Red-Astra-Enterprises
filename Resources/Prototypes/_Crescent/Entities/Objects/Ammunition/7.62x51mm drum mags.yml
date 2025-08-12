@@ -71,11 +71,3 @@
   components:
   - type: BallisticAmmoProvider
     proto: CartridgeRifleUranium
-
-- type: entity
-  id: MagazineRifleDrumShrapnel
-  name: "drum magazine (.20 SGM shrapnel"
-  parent: BaseMagazineRifleDrum
-  components:
-  - type: BallisticAmmoProvider
-    proto: CartridgeRifleShrapnel
