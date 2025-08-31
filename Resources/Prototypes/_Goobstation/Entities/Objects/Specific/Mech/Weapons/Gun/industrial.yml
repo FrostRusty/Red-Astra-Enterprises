@@ -32,7 +32,7 @@
   - type: AmmoCounter
   - type: PressureDamageChange
   - type: UpgradeableGun
-    maxUpgradeCapacity: 40
+    maxUpgradeCapacity: 300
     whitelist:
       tags:
       - PKAUpgrade

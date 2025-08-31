@@ -33,7 +33,7 @@
   - type: CursedHeartGrant
 
 - type: entity
-  id: LavalandVampirismCrystal
+  id: PKAUpgradeLavalandVampirismCrystal
   parent: BasePKAUpgrade
   name: a red crystal
   components:

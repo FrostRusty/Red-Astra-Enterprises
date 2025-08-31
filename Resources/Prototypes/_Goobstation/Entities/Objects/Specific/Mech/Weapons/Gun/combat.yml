@@ -238,6 +238,11 @@
     fireCost: 5
   - type: Appearance
   - type: AmmoCounter
+  - type: UpgradeableGun
+    maxUpgradeCapacity: 250
+    whitelist:
+      tags:
+      - PKAUpgrade
 
 - type: entity
   id: WeaponMechCombatMissileRack8
