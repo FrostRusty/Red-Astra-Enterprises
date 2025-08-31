@@ -39,7 +39,11 @@
   components:
   - type: Sprite
     sprite: _Lavaland/Objects/Specific/Lavaland/loot.rsi
-    state: crystal
+    layers:
+    - state: crystal
+      color: "#ff0000"
+    - state: overlay-crystal
+      color: "#ffffa6"
   - type: GunUpgrade
     tags: [ GunUpgradeReloadSpeed ]
     examineText: gun-upgrade-examine-text-vampirism
