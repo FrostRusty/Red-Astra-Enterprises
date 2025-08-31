@@ -18,7 +18,7 @@
     maxAngle: 45
     angleIncrease: 4
     angleDecay: 16
-    fireRate: 0.5
+    fireRate: 0.75
     selectedMode: SemiAuto
     availableModes:
       - SemiAuto
@@ -27,9 +27,12 @@
     soundEmpty:
       path: /Audio/Weapons/Guns/Empty/lmg_empty.ogg
   - type: AmmoCounter
+  - type: Battery
+    maxCharge: 300 # Battery is charged by mech
+    startingCharge: 300
   - type: ProjectileBatteryAmmoProvider
     proto: MousetrapArmed
-    fireCost: 100
+    fireCost: 50
   - type: Appearance
 
 - type: entity
@@ -55,6 +58,9 @@
     soundEmpty:
       path: /Audio/Weapons/Guns/Empty/lmg_empty.ogg
   - type: AmmoCounter
+  - type: Battery
+    maxCharge: 300 # Battery is charged by mech
+    startingCharge: 300
   - type: ProjectileBatteryAmmoProvider
     proto: TrashBananaPeel
     fireCost: 100

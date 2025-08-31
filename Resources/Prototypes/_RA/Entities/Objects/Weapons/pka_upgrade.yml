@@ -13,10 +13,13 @@
       color: "#e69e02"
     - state: overlay-mech-3
       color: "#e69e02"
+  - type: Tag
+    tags:
+    - WeaponUpgradeMech
   - type: GunUpgrade
-    tags: [ GunUpgradeReloadSpeed ]
+    tags: [ WeaponUpgradeMech ]
     examineText: gun-upgrade-examine-text-speed
-    capacityCost: 150
+    capacityCost: 30
     unique: true
   - type: GunComponentUpgrade
     components:
@@ -43,15 +46,52 @@
       color: "#e69e02"
     - state: overlay-mech-3
       color: "#e69e02"
+  - type: Tag
+    tags:
+    - WeaponUpgradeMech
   - type: GunUpgrade
-    tags: [ GunUpgradeReloadSpeed ]
+    tags: [ WeaponUpgradeMech ]
     examineText: gun-upgrade-examine-text-recharge
-    capacityCost: 100
+    capacityCost: 20
     unique: true
   - type: GunComponentUpgrade
     components:
-      - type: BatterySelfRecharger
-    autoRecharge: true
-    autoRechargeRate: 1.25
-    autoRechargePause: true
-    autoRechargePauseTime: 30
+    - type: BatterySelfRecharger
+      autoRecharge: true
+      autoRechargeRate: 3.75
+      autoRechargePause: true
+      autoRechargePauseTime: 15
+      canEMP: true
+
+# Admeme/Centcomm recharger, NOT balanced for station use.
+- type: entity
+  id: PKAUpgradeRechargeAdmeme
+  parent: BasePKAUpgrade
+  name: High-Grade ElectroMag
+  description: A modkit for heavy weapons, overclocked for use by CentComm's enforcers.
+  components:
+  - type: Sprite
+    layers:
+    - state: base-mech
+      color: "#ffffa6"
+    - state: overlay-mech-1
+      color: "#32bf32"
+    - state: overlay-mech-2
+      color: "#fa4b00"
+    - state: overlay-mech-3
+      color: "#fa4b00"
+  - type: Contraband
+    allowedDepartments: [ CentralCommand ]
+  - type: Tag
+    tags:
+    - WeaponUpgradeMech
+  - type: GunUpgrade
+    tags: [ WeaponUpgradeMech ]
+    examineText: gun-upgrade-examine-text-recharge-admeme
+    capacityCost: 20
+    unique: true
+  - type: GunComponentUpgrade
+    components:
+    - type: BatterySelfRecharger
+      autoRecharge: true
+      autoRechargeRate: 5
