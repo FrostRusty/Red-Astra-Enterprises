@@ -236,6 +236,7 @@ stack-xeno-steel = xeno steel tile
 stack-xeno-steel-corner = xeno steel corner tile
 stack-xeno-maint = xeno techmaint
 stack-dark-squiggly = dark steel squiggly tile
+stacks-dark-squiggly-Vertical = dark steel squiggly Vertical tile
 stack-white-marble-floor = white marble floor
 stack-dark-marble-floor = dark marble floor
 stack-plasma-marble-floor = plasmarble floor
