@@ -30,35 +30,4 @@
     rotation: -90
     # Sunrise-Edit
     buckleOffsets:
-      - "0,-0.15"
-      - "0,0.25"
     size: 200
-  # Construction has to be before PlaceableSurface or you'll place things onto the entity instead of deconstructing it.
-  - type: Construction
-    graph: DoubleBeds
-    node: doubleBed
-  # So that you can put bedsheets on beds again. Would be cool to have a tag
-  # for this so that only bedsheets can be placed.
-  - type: PlaceableSurface
-    placeCentered: true
-  - type: Damageable
-    damageContainer: Inorganic
-    damageModifierSet: Metallic
-  - type: Destructible
-    thresholds:
-    - trigger:
-        !type:DamageTrigger
-        damage: 75
-      behaviors:
-      - !type:DoActsBehavior
-        acts: ["Destruction"]
-      - !type:SpawnEntitiesBehavior
-        spawn:
-          SheetSteel1:
-            min: 1
-            max: 4
-  - type: Transform
-    anchored: true
-    noRot: true
-  - type: Anchorable
-  - type: Pullable
