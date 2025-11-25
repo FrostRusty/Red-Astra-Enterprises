@@ -1,0 +1,98 @@
+- type: entity
+  name: LEO Pen
+  parent: BaseItem
+  id: CEPen
+  description: A luxurious pen for the Lead Engineering Officer of the station.
+  components:
+  - type: Sprite
+    sprite: _Sunrise/Objects/Misc/pens.rsi
+    state: pen_ce
+  - type: Item
+    sprite: _Sunrise/Objects/Misc/pens.rsi
+    heldPrefix: pen_ce
+    size: Tiny
+  - type: Tag
+    tags:
+    - Write
+    - Pen
+  - type: PhysicalComposition
+    materialComposition:
+      Steel: 25
+  - type: EmitSoundOnUse
+    sound:
+      path: /Audio/Items/pen_click.ogg
+      params:
+        volume: -4
+        maxDistance: 2
+  - type: UseDelay
+    delay: 1.5
+
+- type: entity
+  name: CMO Pen
+  parent: CEPen
+  id: CmoPen
+  description: A luxurious pen for the Chief Medical Officer of the station.
+  components:
+  - type: Sprite
+    state: pen_cmo
+  - type: Item
+    heldPrefix: pen_cmo
+
+- type: entity
+  name: HOS Pen
+  parent: CEPen
+  id: HosPen
+  description: A luxurious pen for the Head Of Security of the station.
+  components:
+  - type: Sprite
+    state: pen_hos
+  - type: Item
+    heldPrefix: pen_hos
+
+- type: entity
+  name: LO Pen
+  parent: CEPen
+  id: QmPen
+  description: A luxurious pen for the Logistic's Officer of the station.
+  components:
+  - type: Sprite
+    state: pen_qm
+  - type: Item
+    heldPrefix: pen_qm
+
+- type: entity
+  name: RD Pen
+  parent: CEPen
+  id: RdPen
+  description: A luxurious pen for the Research Director of the station.
+  components:
+  - type: Sprite
+    state: pen_rd
+  - type: Item
+    heldPrefix: pen_rd
+
+- type: entity
+  name: TSFMC Pen
+  parent: [BaseAdvancedPen, BaseCentcommContraband]
+  id: UEGPen
+  description: A cheap pen for the TSFMC.
+  components:
+  - type: Sprite
+    state: pen_ueg
+    sprite: _Sunrise/Objects/Misc/pens.rsi
+  - type: Item
+    sprite: _Sunrise/Objects/Misc/pens.rsi
+    heldPrefix: pen_ueg
+
+- type: entity
+  parent: CEPen
+  id: CommaidPen
+  name: pink maid's pen
+  description: A kawaii pink pen is no less than a kawaii station worker.
+  components:
+  - type: Sprite
+    sprite: _Sunrise/Objects/Misc/pens.rsi
+    state: pen-maid
+  - type: Item
+    sprite: _Sunrise/Objects/Misc/pens.rsi
+    heldPrefix: pen-maid
