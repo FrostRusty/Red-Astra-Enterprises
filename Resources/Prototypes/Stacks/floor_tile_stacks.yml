@@ -748,15 +748,15 @@
   maxCount: 30
 
 - type: stack
-  id: FloorTileDarkSquiggly
+  id: FloorTileDarkSteelSquiggly
   name: stack-dark-steel-squiggly-tile
-  spawn: FloorTileItemDarkSquiggly
+  spawn: FloorTileItemDarkSteelSquiggly
   maxCount: 30
 
 - type: stack
-  id: FloorTileDarkSquigglyVertical
+  id: FloorTileDarkSteelSquigglyVertical
   name: stack-dark-steel-squiggly-Vertical
-  spawn: FloorTileItemDarkSquigglyVertical
+  spawn: FloorTileItemDarkSteelSquigglyVertical
   maxCount: 30
 
 - type: stack

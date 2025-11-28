@@ -1854,28 +1854,28 @@
 
 - type: entity
   parent: FloorTileItemDark
-  id: FloorTileItemDarkSquiggly
+  id: FloorTileItemDarksteelSquiggly
   name: dark steel squiggly tile
   components:
   - type: Sprite
-    state: dark-squiggly
+    state: dark-steel-squiggly
   - type: FloorTile
     outputs:
     - Plating
-    - FloorDarkSquiggly
+    - FloorDarkSteelSquiggly
   - type: Stack
-    stackType: FloorTileDarkSquiggly
+    stackType: FloorTileDarkSteelSquiggly
 
 - type: entity
   parent: FloorTileItemDark
-  id: FloorTileItemDarkSquigglyVertical
+  id: FloorTileItemDarkSteelSquigglyVertical
   name: dark steel squiggly Vertical tile
   components:
   - type: Sprite
-    state: dark-squiggly-Vertical
+    state: dark-steel-squiggly-Vertical
   - type: FloorTile
     outputs:
     - Plating
-    - FloorDarkSquigglyVertical
+    - FloorDarkSteelSquigglyVertical
   - type: Stack
-    stackType: FloorTileDarkSquigglyVertical
+    stackType: FloorTileDarkSteelSquigglyVertical
