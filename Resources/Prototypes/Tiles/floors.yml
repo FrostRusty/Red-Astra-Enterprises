@@ -2387,8 +2387,6 @@
 - type: tile
   id: FloorDarkSteelSquiggly
   name: tiles-dark-steel-squiggly
-  id: FloorDarkSteelSquiggly
-  name: tiles-dark-steel-squiggly
   sprite: /Textures/Tiles/dark_squiggly.png
   variants: 4
   placementVariants:
@@ -2402,13 +2400,10 @@
   footstepSounds:
     collection: FootstepFloor
   itemDrop: FloorTileItemDarkSteelSquiggly
-  itemDrop: FloorTileItemDarksteelSquiggly
   heatCapacity: 10000
   allowRotationMirror: true
 
 - type: tile
-  id: FloorDarkSteelSquigglyVertical
-  name: tiles-dark-steel-squiggly-Vertical
   id: FloorDarkSteelSquigglyVertical
   name: tiles-dark-steel-squiggly-Vertical
   sprite: /Textures/Tiles/dark_squiggly_Vertical.png
@@ -2423,6 +2418,5 @@
   deconstructTools: [ Prying ]
   footstepSounds:
     collection: FootstepFloor
-  itemDrop: FloorTileItemDarkSteelSquigglyVertical
   itemDrop: FloorTileItemDarkSteelSquigglyVertical
   heatCapacity: 10000
