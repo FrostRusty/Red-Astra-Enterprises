@@ -338,6 +338,10 @@
     - !type:AutomatedMaterialStorage
       input: AutomationSlotMaterials
       output: null
+    - !type:AutomatedPorts
+      sinks:
+      - LathePrint
+  - type: LatheAutomation # Goobstation
   - type: SpamEmitSound # Goobstation - random lathe sounds
     minInterval: 300
     maxInterval: 900
@@ -441,7 +445,6 @@
     - SecurityWeaponsStatic
     - SecurityAmmoStatic
     # Goobstation
-    - SecurityWeaponsStaticGoob
     - SecurityAmmoStaticGoob
     - SyndicateAmmoLightStatic
     - ScienceExplosives
@@ -539,6 +542,7 @@
     - SecurityWeaponsGoob
     - RestraintTechnology
     - MiningWeapons
+    - Archguns #RAE
 
 - type: entity
   id: ProtolatheHyperConvection
@@ -670,6 +674,7 @@
     emagDynamicPacks:
     - MechWeaponsSalvage
     - MechWeaponsSecurityLight
+    - Archguns
   - type: MaterialStorage
     whitelist:
       tags:
@@ -762,7 +767,6 @@
     - PowerCellsStatic
     - ScienceExplosives
     - GrenadeTriggersStatic
-    - SecurityWeaponsStaticGoob
     - SecurityWeaponsNonEmaggableStaticGoob
     dynamicPacks:
     - SalvageSecurityBoards
@@ -786,6 +790,7 @@
     - PowerCells
     # RA
     - SlayerBlades
+    - Archguns
   - type: EmagLatheRecipes # Goobstation
     emagStaticPacks:
     - SyndicateAmmoLightStatic
