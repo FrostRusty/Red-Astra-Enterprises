@@ -129,7 +129,7 @@
 - type: entity
   id: WeaponMechCombatHandheldArchgun
   parent: [BaseMechEquipment, BaseGunWieldable, BaseSecurityContraband]
-  name: R.Arch-2 "Dunali"
+  name: RedArch-2 "Dunali"
   description: The pinacle of the Red Astra "Archguns" program, with a miniturized internal GraviMag keeping the gun light and its ammo fabricator fully powered. A focus on burst fire keeps it modest outside the hands of a mech.
   suffix: Mech Weapon, Gun, Combat, Rifle
   components:

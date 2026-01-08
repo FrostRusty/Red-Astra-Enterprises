@@ -20,4 +20,9 @@
         Blunt: 3
         Heat: 6
       armorPenetration: 0.3
+  - type: PointLight
+    enabled: true
+    color: "#00eeff"
+    radius: 3.0
+    energy: 0.5
 
