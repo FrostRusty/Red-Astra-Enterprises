@@ -1,17 +1,23 @@
 - type: entity
-  id: BulletEnergyFabricated
-  categories: [ HideSpawnMenu ]
+  id: BulletFabricatedSpread
+  name: Penis Shot
+  #categories: [ HideSpawnMenu ]
   parent: PelletShotgun
   components:
   - type: Sprite
-    sprite: _Goobstation/Objects/Weapons/Guns/Projectiles/smartgun.rsi
+    sprite: Objects\Weapons\Guns\Projectiles\projectiles2.rsi
     layers:
-    - state: smartgun
-      shader: unshaded
+    - state: shard
+      color: "#00eeff"
+  - type: ProjectileSpread
+    proto: BulletFabricatedSpread
+    count: 2
+    spread: 4
   - type: Projectile
     damage:
       types:
-        Slash: 6
-        Blunt: 7
-        Heat: 5
-      armorPenetration: 0.25
+        Slash: 2
+        Blunt: 3
+        Heat: 6
+      armorPenetration: 0.3
+
