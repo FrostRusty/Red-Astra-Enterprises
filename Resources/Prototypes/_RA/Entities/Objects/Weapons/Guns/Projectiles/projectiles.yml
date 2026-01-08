@@ -5,7 +5,7 @@
   parent: PelletShotgun
   components:
   - type: Sprite
-    sprite: Objects\Weapons\Guns\Projectiles\projectiles2.rsi
+    sprite: Objects/Weapons/Guns/Projectiles/projectiles2.rsi
     layers:
     - state: shard
       color: "#00eeff"
