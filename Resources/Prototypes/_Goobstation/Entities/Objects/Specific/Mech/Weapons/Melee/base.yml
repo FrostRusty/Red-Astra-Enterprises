@@ -22,7 +22,6 @@
     mirrorClothingModifier: false
     walkModifier: 0.75
     sprintModifier: 0.75
-  - type: HeldSpeedModifier
   - type: UpgradeableGun
     maxUpgradeCapacity: 50
     whitelist:
