@@ -176,6 +176,7 @@
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/ship_perforator.ogg
   - type: Wieldable
+  - type: GunRequiresWield
   - type: GunWieldBonus
     angleDecay: -8
     minAngle: -8
