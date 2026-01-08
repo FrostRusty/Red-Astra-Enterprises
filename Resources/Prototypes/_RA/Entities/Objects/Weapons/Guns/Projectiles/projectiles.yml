@@ -1,7 +1,8 @@
 - type: entity
   id: BulletFabricatedSpread
-  name: Penis Shot
-  #categories: [ HideSpawnMenu ]
+  name: Slagshot
+  description: A scrap of matter from an ammo fabricator. You should not be seeing this, unless you've broken your weapon in half.
+  categories: [ HideSpawnMenu ]
   parent: PelletShotgun
   components:
   - type: Sprite
