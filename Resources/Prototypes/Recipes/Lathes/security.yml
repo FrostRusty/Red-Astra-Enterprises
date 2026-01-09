@@ -410,9 +410,10 @@
   id: GraviMagGun
   result: WeaponMechCombatHandheldArchgun
   completetime: 10
-  Steel: 500
-  Plastic: 500
-  Glass: 200
-  Gold: 200
-  Plasma: 200
-  Uranium: 200
+  materials:
+    Steel: 500
+    Plastic: 500
+    Glass: 200
+    Gold: 200
+    Plasma: 200
+    Uranium: 200
