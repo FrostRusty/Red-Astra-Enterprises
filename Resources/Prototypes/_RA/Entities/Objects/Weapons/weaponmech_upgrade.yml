@@ -26,6 +26,10 @@
     - type: ClothingSpeedModifier
       walkModifier: 0.85
       sprintModifier: 0.85
+    - type: HeldSpeedModifier
+      mirrorClothingModifier: false
+      walkModifier: 0.85
+      sprintModifier: 0.85
     - type: BatterySelfRecharger
       autoRecharge: true
       autoRechargeRate: 10
@@ -58,7 +62,7 @@
     - WeaponUpgradeMech
   - type: GunUpgrade
     tags: [ WeaponUpgradeMech ]
-    examineText: gun-upgrade-examine-text-recharge-admeme
+    examineText: gun-upgrade-examine-text-speed-admeme
     capacityCost: 50
     unique: true
   - type: GunComponentUpgrade

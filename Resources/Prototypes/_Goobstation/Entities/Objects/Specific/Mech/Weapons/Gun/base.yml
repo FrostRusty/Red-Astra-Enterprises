@@ -19,9 +19,12 @@
     size: Ginormous
   - type: MultiHandedItem
   - type: ClothingSpeedModifier
-    walkModifier: 0.5
-    sprintModifier: 0.5
+    walkModifier: 0.75
+    sprintModifier: 0.75
   - type: HeldSpeedModifier
+    mirrorClothingModifier: false
+    walkModifier: 0.7
+    sprintModifier: 0.7
   - type: UpgradeableGun
     maxUpgradeCapacity: 50
     whitelist:
